@@ -1,0 +1,3 @@
+zero
+: Nat
+= λP λs λz z

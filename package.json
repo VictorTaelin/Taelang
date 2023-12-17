@@ -1,0 +1,22 @@
+{
+  "name": "taelang",
+  "version": "0.1.0",
+  "description": "Taelin's personal productivity language.",
+  "main": "main.ts",
+  "bin": {
+    "taelang": "./main.ts"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victortaelin/taelang.git"
+  },
+  "author": "VictorTaelin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/victortaelin/taelang/issues"
+  },
+  "homepage": "https://github.com/victortaelin/taelang#readme"
+}
