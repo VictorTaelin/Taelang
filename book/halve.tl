@@ -6,6 +6,6 @@ halve
     def T = λn(Nat)
     def if_succ = λnpp(succ (halve npp))
     def if_zero = zero
-    (np T if_succ if_zero)
+    (~np T if_succ if_zero)
   def if_zero = zero
-  (n T if_succ if_zero)
+  (~n T if_succ if_zero)

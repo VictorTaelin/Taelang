@@ -1,3 +1,3 @@
 zero
 : Nat
-= λP λs λz z
+= ~ λP λs λz z
