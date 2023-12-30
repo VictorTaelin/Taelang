@@ -2,6 +2,6 @@ Nat
 : *
 = $self
   ∀(P: ∀(n: Nat) *)
-  ∀(s: ∀(i: Nat) (P (succ i)))
+  ∀(s: ∀(n: Nat) (P (succ n)))
   ∀(z: (P zero))
   (P self)

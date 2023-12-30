@@ -7,6 +7,12 @@ cong
   ∀(e: (Equal A a b))
   (Equal B (f a) (f b))
 = λA λB λa λb λf λe
-  def T = λx(Equal B (f a) (f x))
-  def if_refl = (refl B (f a))
-  (e T if_refl)
+  (e λx∀(P:∀(x:B) *)∀(h:(P (f a)))(P (f x)) λP λr r)
+
+//- A = {a:*}
+//- B = {b:*}
+//- a = {c:a}
+//- b = {d:a}
+//- f = {e:∀(g:a) b}
+//- e = {f:(Equal a c d)}
+//NOTE: (?T) = ∀(g:∀(g:b) *) ∀(h:(g (e c))) (g (e d))

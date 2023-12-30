@@ -7,21 +7,69 @@
 //   uncycle 2 = 1
 
 uncycle
-: ∀(x: Trit) (Exists ∀(x:Trit)Trit λf ∀(x:Trit) (Equal Trit x (f (cycle x))))
-= λx
-  (indeed 
-    ∀(c:Trit)Trit
-    λf∀(x:Trit)(Equal Trit x (f (cycle x)))
-    λx (~x λx(Trit)
-      ~λPλxλyλz(~trit2 P x y z)
-      ~λPλxλyλz(~trit0 P x y z)
-      ~λPλxλyλz(~trit1 P x y z))
-    λx (~x λx ∀(c:∀(c:Trit) *) ∀(d:(c x))
-      (c ((~(cycle x) λf Trit
-        ~λPλxλyλz(~trit2 P x y z)
-        ~λPλxλyλz(~trit0 P x y z)
-        ~λPλxλyλz(~trit1 P x y z))))
-      λP λx x
-      λP λx x
-      λP λx x))
+: (Exists ∀(x:Trit)Trit λf ∀(x:Trit) (Equal Trit x (f (cycle x))))
+= ~λP λindeed (indeed
+  λx (~x λx(Trit)
+    ~ λd λe λf λg ?A
+    ~ λd λe λf λg ?B
+    ~ λd λe λf λg ?C
+  )
+  λx (~x λx(∀(d:∀(d:Trit) *) ∀(e:(d x)) (d (λf (~f λg Trit trit2 trit0 trit1) (cycle x))))
+    λP λx x
+    λP λx x
+    λP λx x
+  )
+)
+
+
+
+
+
+// ∀(d:∀(d:Trit) *) ∀(e:(d c)) (d (λf (~f λg Trit (?A) (?B) (?C)) (cycle c)))
+
+//λs λz (s λs λz (s λs λz (s λs λz (s ....
+//λs λz (s (s (s (s z))))
+
+//double = λn (n λpλsλz(s λsλz(s (double p))) λsλz(z))
+//double = λn (n λpλsλz(s (s p)) λsλz(z))
+
+
+
+
+// ∀(d:∀(d:Trit) *) ∀(e:(d c)) (d (λf (~f λg Trit (?A) (?B) (?C)) (cycle c)))
+
+  //∀(P: ∀(x: A) *)
+  //∀(p: (P a))
+  //(P b)
+
+//~λP λi (i
+  //λx (~x λx(Trit)
+    //?A
+    //?B
+    //?C
+  //)
+  //λx (~x λx(Equal Trit x (~(cycle x) λx(Trit) ?A ?B ?C))
+    //λP λp p
+    //λP λp p
+    //λP λp p
+  //)
+//)
+
+//∀(d:∀(d:Trit) *) ∀(e:(d c)) (d (λf (~f λg Trit (?A) (?B) (?C)) (cycle c)))
+
+  //(indeed 
+    //∀(c:Trit)Trit
+    //λf∀(x:Trit)(Equal Trit x (f (cycle x)))
+    //λx (~x λx(Trit)
+      //~λPλxλyλz(~trit2 P x y z)
+      //~λPλxλyλz(~trit0 P x y z)
+      //~λPλxλyλz(~trit1 P x y z))
+    //λx (~x λx ∀(c:∀(c:Trit) *) ∀(d:(c x))
+      //(c ((~(cycle x) λf Trit
+        //~λPλxλyλz(~trit2 P x y z)
+        //~λPλxλyλz(~trit0 P x y z)
+        //~λPλxλyλz(~trit1 P x y z))))
+      //λP λx x
+      //λP λx x
+      //λP λx x))
 
