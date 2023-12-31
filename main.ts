@@ -1,6 +1,7 @@
 #!/usr/bin/env ts-node
 
 import * as T from './taelang';
+import * as fs from 'fs';
 
 var BOOK : T.Book = {};
 
@@ -11,7 +12,10 @@ const load = T.loader(BOOK);
 
 switch (func) {
   case "check": {
-    T.check_one(load, name);
+    var new_code = T.check_def(load, name);
+    if (new_code !== "⊥") {
+      fs.writeFileSync(name+".tl", new_code);
+    }
     break;
   }
   case "normalize": {
